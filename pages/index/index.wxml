@@ -1,0 +1,22 @@
+<view class="goodsList-left" >
+    <block wx:for="{{goodsArray}}" wx:key="{{index}}">
+      <view class='float' data-goodId='{{item.id}}' wx:if="{{index%2==0}}">
+        <view class='goodsImage_wrap'><image class='goodsImage' src='{{item.image}}' lazy-load>></image></view>
+        <view class='content'>
+          <view class='goodsName'>{{item.name}}</view>
+          <view class='price'>￥{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="goodsList-right" >
+    <block wx:for="{{goodsArray}}" wx:key="{{index*2000}}">
+      <view class='float' data-goodId='{{item.id}}' wx:if="{{index%2==1}}">
+        <view class='goodsImage_wrap'><image class='goodsImage' src='{{item.image}}' lazy-load></image></view>
+        <view class='content'>
+          <view class='goodsName'>{{item.name}}</view>
+          <view class='price'>￥{{item.price}}</view>
+        </view>
+      </view>
+    </block>
+</view>
